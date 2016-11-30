@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C53a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebRTCVideoChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CYS-TZ-3yV">
+                                <rect key="frame" x="0.0" y="20" width="375" height="323.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diT-Qq-8lk">
+                                <rect key="frame" x="0.0" y="343.5" width="375" height="323.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKL-10-xBL">
+                                <rect key="frame" x="255" y="612" width="100" height="35"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oYs-I1-Ur6"/>
+                                    <constraint firstAttribute="height" constant="35" id="sbQ-j0-xCN"/>
+                                </constraints>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="0.98823529409999999" green="0.98039215690000003" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tapConnectButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GDf-s9-R1B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="diT-Qq-8lk" secondAttribute="trailing" id="2e5-jP-LQH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="diT-Qq-8lk" secondAttribute="bottom" id="IKP-rp-EdS"/>
+                            <constraint firstAttribute="trailing" secondItem="CYS-TZ-3yV" secondAttribute="trailing" id="OSc-Ja-9xC"/>
+                            <constraint firstItem="CYS-TZ-3yV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pes-yu-zsQ"/>
+                            <constraint firstItem="diT-Qq-8lk" firstAttribute="height" secondItem="CYS-TZ-3yV" secondAttribute="height" id="cA1-3r-bSg"/>
+                            <constraint firstItem="diT-Qq-8lk" firstAttribute="top" secondItem="CYS-TZ-3yV" secondAttribute="bottom" id="cix-c6-rH9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yKL-10-xBL" secondAttribute="bottom" constant="20" id="j7g-pH-V7S"/>
+                            <constraint firstItem="diT-Qq-8lk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pmd-fG-LfL"/>
+                            <constraint firstItem="CYS-TZ-3yV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rw6-qm-Q77"/>
+                            <constraint firstAttribute="trailing" secondItem="yKL-10-xBL" secondAttribute="trailing" constant="20" id="zZN-Aa-LCp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="yKL-10-xBL" id="ZIx-6Y-zGK"/>
+                        <outlet property="localView" destination="diT-Qq-8lk" id="IYE-qi-sdP"/>
+                        <outlet property="remoteView" destination="CYS-TZ-3yV" id="LyD-xk-dye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
